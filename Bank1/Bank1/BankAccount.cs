@@ -29,7 +29,7 @@ namespace BankAccounts
             get { return m_balance;  }
         }
 
-        public Debit (double amount)
+        public void Debit (double amount)
         {
             if (m_frozen)
             {
