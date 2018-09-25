@@ -47,5 +47,32 @@ namespace BankAccounts
             m_balance += amount;
         }
 
+        public void Credit(double amount)
+        {
+            if (m_frozen)
+            {
+                throw new Exception("Account frozen");
+            }
+            if (amount < 0)
+            {
+                throw new ArgumentOutOfRangeException("amount");
+            }
+            m_balance += amount;
+
+        }
+
+        public void UnFreezeAccount()
+        {
+            m_frozen = false;
+        }
+
+
+        public static void Main()
+        {
+            BankAccount ba = new BankAccount("Mr Been", 11.99);
+            ba.Credit(5.77);
+            ba.Debit(11.22);
+            Console.WriteLine("Current balance is ${0}", ba.Balance);
+        }
     }
 }
