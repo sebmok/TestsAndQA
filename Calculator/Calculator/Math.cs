@@ -22,24 +22,24 @@ namespace Calculator
             _operation = operation;
         }
                 
-        public int intPlus(int a, int b)
+        public int intPlus(int A, int B)
         {
-            return a + b;
+            return A + B;
         }
 
-        public int intMinus(int a, int b)
+        public int intMinus(int A, int B)
         {
-            return a - b;
+            return A - B;
         }
 
-        public int intMultiply(int a, int b)
+        public int intMultiply(int A, int B)
         {
-            return a * b;
+            return A * B;
         }
 
-        public int intDivision(int a, int b)
+        public int intDivision(int A, int B)
         {
-            return a / b;
+            return A / B;
         }
 
 
